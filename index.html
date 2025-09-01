@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" }
+    </script>
+  </head>
+  <body class="bg-white text-black dark:bg-black dark:text-white font-serif">
+    <!-- Header -->
+    <header class="border-b border-gray-200">
+      <div
+        class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <h1 class="text-xl font-bold">My Portfolio</h1>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="#profile" class="hover:underline">Profile</a>
+          <a href="#skills" class="hover:underline">Skills</a>
+          <a href="#certifications" class="hover:underline">Certifications</a>
+          <a href="#projects" class="hover:underline">Projects</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </nav>
+
+        <!-- Mobile Button -->
+        <button id="menu-btn" class="md:hidden focus:outline-none">
+          <!-- Icon Hamburger -->
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+        <a href="#profile" class="block py-2 border-b">Profile</a>
+        <a href="#skills" class="block py-2 border-b">Skills</a>
+        <a href="#certifications" class="block py-2 border-b">Certifications</a>
+        <a href="#projects" class="block py-2 border-b">Projects</a>
+        <a href="#contact" class="block py-2">Contact</a>
+      </div>
+    </header>
+
+    <!-- SCRIPT -->
+    <script>
+      const btn = document.getElementById("menu-btn")
+      const menu = document.getElementById("mobile-menu")
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden")
+      })
+    </script>
+
+    <!-- Profile -->
+    <section id="profile" class="max-w-4xl mx-auto px-6 py-16">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img
+          src="profile.jpg"
+          alt="Profile Photo"
+          class="w-32 h-32 rounded-full object-cover border dark:border-gray-700"
+        />
+        <div>
+          <h2 class="text-2xl font-bold">Ro'uf Aufalin Al Ghoitsal</h2>
+          <p class="mt-2 text-lg leading-relaxed">
+            Saya adalah seorang mahasiswa lulusan jurusan Pend. Teknik
+            Informatika dan Komputer yang memiliki passion di dalam dunia
+            pendidikan dan teknologi. Sebagai seorang generalis yang sedang
+            mengeksplorasi banyak bidang teknologi, saat ini saya fokus
+            mengembangkan kemampuan saya di bidang kecerdasan buatan, terutama
+            pada pengembangan machine learning. Saya terus berusaha untuk
+            mengembangkan diri menjadi lebih baik di berbagai bidang yang saya
+            sukai, dan saya percaya dengan usaha dan doa saya bisa menjadi
+            apapun yang saya impikan.
+          </p>
+          <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
+            📍 Kudus, Jawa Tengah | 📧 roufaufal01@gmail.com
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills
+    <section
+      id="skills"
+      class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 dark:border-gray-800"
+    >
+      <h2 class="text-xl font-bold mb-6">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-base">
+        <span class="px-3 py-2 border rounded dark:border-gray-700"
+          >Python</span
+        >
+        <span class="px-3 py-2 border rounded dark:border-gray-700"
+          >TensorFlow</span
+        >
+        <span class="px-3 py-2 border rounded dark:border-gray-700"
+          >PyTorch</span
+        >
+        <span class="px-3 py-2 border rounded dark:border-gray-700">SQL</span>
+        <span class="px-3 py-2 border rounded dark:border-gray-700"
+          >Docker</span
+        >
+        <span class="px-3 py-2 border rounded dark:border-gray-700">Git</span>
+      </div>
+    </section> -->
+
+    <section id="projects" class="py-16 bg-white dark:bg-black">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-8 text-gray-900 dark:text-gray-100">
+          Projects
+        </h2>
+
+        <!-- Project Bike Sharing -->
+        <div class="border dark:border-gray-700 rounded-xl p-4 mb-8">
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            🚲 Bike Sharing Data Analysis
+          </h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-300">
+            Analisis data penyewaan sepeda untuk menjawab pertanyaan bisnis
+            terkait tren per bulan dan hubungan musim dengan jumlah penyewaan.
+            Proyek ini mencakup EDA, visualisasi data, dan pembuatan dashboard
+            interaktif menggunakan Streamlit.
+          </p>
+          <ul
+            class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300"
+          >
+            <li>Visualisasi tren penyewaan sepeda per bulan tiap tahun</li>
+            <li>Analisis jumlah penyewaan berdasarkan musim</li>
+            <li>Dashboard interaktif dengan Streamlit</li>
+          </ul>
+          <div class="mt-4 flex gap-4">
+            <a
+              href="https://github.com/RoufAufalin/Project_Bike_Sharing_Analysis/blob/master/Proyek_Analisis_Data.ipynb"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Source Code</a
+            >
+            <a
+              href="https://bike-sharing-analysis-rouppppppp.streamlit.app/"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Live Dashboard</a
+            >
+          </div>
+        </div>
+
+        <!-- Diabetes Pred -->
+        <div class="border dark:border-gray-700 rounded-xl p-4 mb-8">
+          <h3 class="text-2xl font-semibold">
+            🩺 Prediksi Risiko Diabetes Menggunakan Machine Learning
+          </h3>
+          <p class="mt-2 text-gray-700 dark:text-gray-300">
+            Proyek ini bertujuan untuk memprediksi risiko diabetes berdasarkan
+            data kesehatan pasien perempuan keturunan Pima Indian. Model machine
+            learning seperti Logistic Regression, Decision Tree, dan Random
+            Forest digunakan untuk membandingkan performa prediksi.
+          </p>
+
+          <ul
+            class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300"
+          >
+            <li>
+              Membangun model klasifikasi untuk memprediksi risiko diabetes
+            </li>
+            <li>
+              Menganalisis fitur yang paling berpengaruh terhadap prediksi
+            </li>
+            <li>Random Forest menghasilkan performa terbaik (~80% akurasi)</li>
+          </ul>
+
+          <div class="mt-4 flex gap-4">
+            <a
+              href="https://github.com/RoufAufalin/Predictive-Analysis-Diabetes-Prediction"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Source Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Analisis Sentimen -->
+
+        <!-- Project 3 -->
+        <div class="border dark:border-gray-700 rounded-lg p-6 mb-8">
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            📚 Analisis Sentimen Aplikasi iPusnas
+          </h3>
+          <p
+            class="mt-1 text-base leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Proyek analisis sentimen ulasan aplikasi iPusnas menggunakan dua
+            pendekatan:
+          </p>
+          <ul class="list-disc ml-6 mt-2 text-gray-700 dark:text-gray-300">
+            <li>
+              <b>Lexicon-based:</b> Menghitung skor sentimen berdasarkan kamus
+              lexicon Bahasa Indonesia.
+            </li>
+            <li>
+              <b>Machine Learning:</b> TF-IDF + Random Forest & Logistic
+              Regression, Word2Vec + SVM & Logistic Regression.
+            </li>
+          </ul>
+          <p
+            class="mt-2 text-base leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Data diperoleh melalui web scraping ulasan Google Play Store. Hasil
+            analisis membandingkan performa kedua pendekatan berdasarkan
+            akurasi.
+          </p>
+
+          <div class="mt-4 flex gap-4">
+            <a
+              href="https://github.com/RoufAufalin/Analisis-Sentimen-Aplikasi-IPUSNAS/blob/master/README.MD"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Source Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Sistem Rekomendasi Film -->
+        <div class="border dark:border-gray-700 rounded-lg p-6 mb-8">
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            🎬 Sistem Rekomendasi Film
+          </h3>
+          <p
+            class="mt-1 text-base leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Proyek ini bertujuan mengembangkan sistem rekomendasi film
+            menggunakan dataset MovieLens.
+          </p>
+          <ul class="list-disc ml-6 mt-2 text-gray-700 dark:text-gray-300">
+            <li>
+              <b>Business Understanding:</b> Membantu pengguna memilih film
+              dengan rekomendasi personal.
+            </li>
+            <li>
+              <b>Goals:</b> Mengembangkan sistem rekomendasi sesuai preferensi
+              pengguna.
+            </li>
+            <li>
+              <b>Solution:</b> Content-Based Filtering & Collaborative
+              Filtering.
+            </li>
+            <li>
+              <b>Data Understanding:</b> Dataset MovieLens dengan metadata
+              45.000 film dan 100.000 rating dari 700 pengguna.
+            </li>
+          </ul>
+          <div class="mt-4 flex gap-4">
+            <a
+              href="https://github.com/RoufAufalin/Sistem-Rekomendasi-Film"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Source Code</a
+            >
+          </div>
+        </div>
+
+        <!-- Rekomendasi Jurusan -->
+        <!-- Sistem Rekomendasi Jurusan Kuliah -->
+        <div class="border dark:border-gray-700 rounded-lg p-6 mb-8">
+          <h3 class="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+            🌟 Sistem Rekomendasi Jurusan Kuliah Berbasis NLP
+          </h3>
+          <p
+            class="mt-1 text-base leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Proyek ini bertujuan untuk membantu siswa memilih jurusan kuliah
+            yang sesuai dengan minat dan kepribadian mereka menggunakan
+            pendekatan
+            <b>Natural Language Processing (NLP)</b>.
+          </p>
+          <ul class="list-disc ml-6 mt-2 text-gray-700 dark:text-gray-300">
+            <li>
+              <b>Fitur Utama:</b> Input narasi minat & kepribadian siswa, sistem
+              memberikan rekomendasi jurusan dengan antarmuka web modern, cepat,
+              dan responsif.
+            </li>
+            <li>
+              <b>Teknologi:</b> Model NLP dengan TensorFlow menggunakan
+              Embedding Layer, Bidirectional LSTM, Dense + ReLU + Dropout, dan
+              Output Layer (Softmax).
+            </li>
+            <li>
+              <b>Training:</b> Model dilatih dengan
+              SparseCategoricalCrossentropy loss, optimizer Adam, dan evaluasi
+              dengan metric akurasi.
+            </li>
+          </ul>
+          <div class="mt-4 flex gap-4">
+            <a
+              href="https://github.com/RoufAufalin/Sistem-Rekomendasi-Jurusan"
+              class="text-blue-600 dark:text-blue-400 hover:underline"
+              >Source Code</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section
+      id="certifications"
+      class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 dark:border-gray-800"
+    >
+      <h2 class="text-xl font-bold mb-6">Certifications</h2>
+      <div class="space-y-4">
+        <div class="border dark:border-gray-700 rounded-xl p-4">
+          <span class="font-medium">Machine Learning Engineer Cohort</span> —
+          Coding Camp by DBS Foundation(2025)
+        </div>
+        <div class="border dark:border-gray-700 rounded-xl p-4">
+          <span class="font-medium">Android Development Cohort</span> — Bangkit
+          Academy ied Google, GoTo, Traveloka (2024)
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-200 dark:border-gray-800"
+    >
+      <h2 class="text-xl font-bold mb-6">Contact</h2>
+      <p class="mb-4 text-base">
+        Feel free to reach out for collaboration or opportunities:
+      </p>
+      <ul class="space-y-2 text-base">
+        <li>
+          📧 Email:
+          <a href="mailto:roufaufal01@gmail.com" class="underline"
+            >roufaufal01@gmail.com</a
+          >
+        </li>
+        <li>
+          💼 LinkedIn:
+          <a
+            href="https://www.linkedin.com/in/ro-uf-aufalin-al-ghoitsal-3606a0221/"
+            target="_blank"
+            class="underline"
+            >linkedin.com/in/rouf-aufalin-alghoitsal</a
+          >
+        </li>
+        <li>
+          🐙 GitHub:
+          <a
+            href="https://github.com/RoufAufalin"
+            target="_blank"
+            class="underline"
+            >github.com/RoufAufalin</a
+          >
+        </li>
+        <li>
+          📄 <a href="resume.pdf" class="underline">Download Resume (PDF)</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="max-w-4xl mx-auto px-6 py-12 border-t border-gray-200 dark:border-gray-800 text-sm text-gray-500 dark:text-gray-400"
+    >
+      © 2025 Your Name. Minimalist portfolio built with TailwindCSS.
+    </footer>
+
+    <script>
+      // Toggle dark mode
+      document.getElementById("toggleDark").addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark")
+      })
+    </script>
+  </body>
+</html>
