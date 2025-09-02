@@ -3,7 +3,7 @@ name: Deploy Portfolio to GitHub Pages
 on:
   push:
     branches:
-      - main   # sesuaikan dengan branch utama kamu
+      - master   # sesuaikan dengan branch utama kamu
 
 permissions:
   contents: write
