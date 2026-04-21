@@ -3,11 +3,11 @@ export const siteConfig = {
   tagline: "Pembelajar Sepanjang Hayat",
   avatar: "profile.png",
   links: [
-    {
-      title: "Web Portfolio",
-      subtitle: "Lihat portofolio lengkap",
-      href: "portfolio.html",
-    },
+    // {
+    //   title: "Web Portfolio",
+    //   subtitle: "Lihat portofolio lengkap",
+    //   href: "portfolio.html",
+    // },
     // {
     //   title: "CV (PDF)",
     //   subtitle: "Download / lihat CV",
