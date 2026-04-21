@@ -15,7 +15,7 @@ export const siteConfig = {
     // },
     {
       title: "Send Message to Me",
-      subtitle: "Isi Google Form untuk menghubungi saya",
+      subtitle: "Send me an anonymous message",
       href: "https://forms.gle/d44q4WJhnWK4J2pZ6",
     },
   ],
